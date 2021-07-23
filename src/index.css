@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 600px;
   margin: 2rem auto;
+  background-color: #FDF7EC;
 }
 
 code {
@@ -34,4 +35,37 @@ img{
 
 .description p{
   margin: 0 auto auto 1rem;
+}
+
+.genre-title {
+  display: flex;
+}
+
+.title{
+  padding: 8px;
+  border: 1px solid #F1C26A;
+  margin: 2rem 1rem;
+  border-radius: 8px;
+  background-color: #F6CDB6;
+}
+
+.title:hover{
+  cursor: pointer;
+  background-color: #F4C1A4;
+}
+
+h2{
+  font-weight: 600;
+}
+
+hr{
+  border-bottom: none;
+  border-top: 1px solid rgb(190, 187, 187);
+}
+
+.list-items{
+  background-color: #DCE2E5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
 }

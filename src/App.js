@@ -1,16 +1,36 @@
-import genres from './genres';
- 
+ import List from "./List"
+ import Header from "./Header"
+ import { useState } from "react";
+
 function App() {
+  const [displayItems, setDisplayItems] = useState("Philosophy");
+
+  const heading = Object.keys(List);
+
+  const clickHandler = (e) =>{
+      setDisplayItems(e.target.innerHTML);
+      
+  }
+
   return (
     <div className="App">
-      <div className="heading">
-        <img src="https://image.flaticon.com/icons/png/512/2132/2132283.png" alt="book-icon" />
-        <h1>goodbooks</h1>
+      <Header/>
+      <div className="genre-title">
+        {heading.map(item => (
+          <div className="title" onClick={clickHandler}>
+            {item}
+          </div>
+        ))}
       </div>
-      <div className="description">
-      <p>Check out my favourite book. Select the genres to get started.</p>
+      <hr />
+      <div>
+       {List[displayItems].map(item =>(
+        <div className = "list-items">   
+         <h2>{item.title}</h2>
+         <p>{item.rating}</p>
+        </div>
+       ))}
       </div>
-      <genres name ={"saad"}/>
     </div>
   );
 }
