@@ -5,14 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 600px;
-  margin: 2rem auto;
+  margin: 2rem auto auto;
   background-color: #FDF7EC;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.upper-section{
+  max-width: 600px;
+  margin: auto;
 }
 
 .heading{
@@ -68,4 +72,17 @@ hr{
   border-radius: 10px;
   padding: 0.5rem 1rem;
   margin: 1rem;
+}
+
+footer{
+  height: 40px;
+  background-color: #fff;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h3{
+  font-weight: 500;
 }

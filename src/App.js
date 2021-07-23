@@ -1,5 +1,6 @@
  import List from "./List"
  import Header from "./Header"
+ import Footer from "./Footer";
  import { useState } from "react";
 
 function App() {
@@ -14,23 +15,26 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
-      <div className="genre-title">
-        {heading.map(item => (
-          <div className="title" onClick={clickHandler}>
-            {item}
+      <div className="upper-section">
+        <Header/>
+        <div className="genre-title">
+          {heading.map(item => (
+            <div className="title" onClick={clickHandler}>
+              {item}
+            </div>
+          ))}
+        </div>
+        <hr />
+        <div>
+        {List[displayItems].map(item =>(
+          <div className = "list-items">   
+          <h2>{item.title}</h2>
+          <p>{item.rating}</p>
           </div>
         ))}
-      </div>
-      <hr />
-      <div>
-       {List[displayItems].map(item =>(
-        <div className = "list-items">   
-         <h2>{item.title}</h2>
-         <p>{item.rating}</p>
         </div>
-       ))}
       </div>
+      <Footer/>
     </div>
   );
 }
