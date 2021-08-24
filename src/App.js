@@ -29,6 +29,7 @@ function App() {
         {List[displayItems].map(item =>(
           <div className = "list-items">   
           <h2>{item.title}</h2>
+          <p>{item.description}</p>
           <p>{item.rating}</p>
           </div>
         ))}
